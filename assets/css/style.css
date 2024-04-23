@@ -1,51 +1,135 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    color: whitesmoke;
-    margin-left: 20px;
-    margin-right: 20px;
-}
+/* Styling  */
 header {
-    background-color: #333;
-    color: white;
-    /* padding: 1rem; */
-}
-nav a {
-    color: white;
-    /* margin-right: 1rem; */
-    text-decoration: none;
-}
-footer {
-    background-color: #333;
-    color: white;
-    /* padding: 1rem; */
-    text-align: center;
-}
-.step {
-    border: 4px solid #0c0909;
-    align-items: center;
-    
-    margin-bottom: 20px;
-    background-color: rgb(92, 156, 224);
+    color: #27374d; /* Text color */
+    /* padding: 1rem; */ /* Padding commented out */
+  }
+  
+  /* Styling for  links */
+  nav a {
+    color: white; /* Text color */
+    /* margin-right: 1rem; */ /* Margin commented out */
+    text-decoration: none; /* Remove underline from links */
+  }
+
+  a {
+    font-size: 1.2rem;
+    color: #000000; /* Text color */
+    font-weight: 400;
+    /* margin-right: 1rem; */ /* Margin commented out */
+    text-decoration: none; /* Remove underline from links */
+  }
+
+  a:hover {
+    color: #06238f; /* Text color */
+    /* font-weight: 900; */
+    /* margin-right: 1rem; */ /* Margin commented out */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  /* Styling for  title */
+  .main_title {
+    font-size: 2rem; /* Font size */
+  }
+  
+  /* Styling for  */
+  footer {
+    /* background-color: #333; */ /* Background color commented out */
+    color: #27374d; /* Text color */
+    /* padding: 1rem; */ /* Padding commented out */
+    text-align: center; /* Center-align text */
+    font-weight: bolder; /* Bold font weight */
+  }
+  
+/* Styling for the body of the document */
+body {
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0; /* Remove default margin default margin default margin default margin default margin default */
+    padding: 0; /* Remove default padding  default padding default paddingdefault padding*/
+    background-color: #fffffc; /* Background color */
+    background-image: url("../images/diamond.png"); 
+    color: #27374d; /* Text color default margin default margin default margin*/
+    margin-left: 20px; /* Left margin default margin default margin default margin*/
+    margin-right: 20px; /* Right margin default margin default margin default margin*/
+  }
+  
+  /* Styling for steps */
+  .step {
+    border: 4px solid #0c0909; /* Border default margin default margin default margin*/
+    border-radius: 10px; /* Border radius default margin default margin default margin*/
+    align-items: center; /* Align items Right margin default margin default Right margin default margin default */
+    padding-left: 20px; /* Left padding Right margin default margin default */
+    padding-right: 30px; /* Right padding Right margin default margin default */
+    margin-bottom: 20px; /* Bottom margin Right margin default margin default */
+    background-color: #f9fcff; /* Background color */
+    background-image: radial-gradient(circle at center, #f9fcff 0%, #dee4ea 74%); /* Background image */
     box-shadow: 
-        0 0 10px rgba(0, 0, 0, 0.1), /* Top layer shadow */
-        0 5px 15px rgba(0, 0, 0, 0.5), /* Bottom layer shadow */
-        inset 0 0 10px rgba(255, 255, 255, 0.2); /* Inner shadow */
-}
+      0 0 10px rgba(0, 0, 0, 0.1), /* Top layer shadow */
+      0 5px 15px rgba(0, 0, 0, 0.5), /* Bottom layer shadow */
+      inset 0 0 10px rgba(255, 255, 255, 0.2); /* Inner shadow */
+      /* Shadow for the step */
+  }
+  
+/* Styling for the heading inside step */
 .step h2 {
-    margin-top: 0;
-}
-.step img {
-    max-width: 50%;
-    height: auto;
-}
-.step pre {
-    background-color: #bc6fef;
-    /* padding: 10px; */
-    border-radius: 3px;
-}
-.theory{
-    font-size: 1.5rem;
-}
+    margin-top: 10px; /* Add top margin to the heading */
+  }
+  
+  /* Styling for images inside step */
+  .step img {
+    max-width: 50%; /* Set maximum width for images */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid black; /* Add border around images */
+  }
+  
+  /* Styling for paragraphs inside step */
+  .step p {
+    font-size: 1.2rem; /* Set font size for paragraphs */
+  }
+  
+  /* Styling for preformatted text inside step */
+  .step pre {
+    background-color: #2b2b2b; /* Set background color for the code block */
+    padding: 10px; /* Add padding to the code block */
+    border-radius: 5px; /* Add rounded corners to the code block */
+    overflow-x: auto; /* Add horizontal scrollbar if needed */
+  }
+  
+  /* Styling for code inside preformatted text */
+  .step pre code {
+    font-family: Consolas, Monaco, "Andale Mono", monospace; /* Set font family for code */
+    color: #ddd; /* Set text color for code */
+    font-weight: bolder; /* Set font weight for code */
+  }
+  
+  /* Styling for theory section inside step */
+  .step_theory {
+    text-align: justify; /* Justify text alignment for theory section */
+  }
+ /* Styling for theory section */
+.theory {
+    font-size: 1.5rem; /* Set font size */
+    text-align: justify; /* Justify text alignment */
+  }
+  
+  /* Styling for unordered list */
+  .mylist {
+    list-style-type: disc; /* Set bullet style */
+    margin-left: 20px; /* Add left margin for better alignment */
+    padding-left: 0; /* Remove default padding */
+  }
+  
+  /* Styling for list items */
+  .mylist li {
+    margin-bottom: 8px; /* Add bottom margin between list items */
+    font-size: 1.2rem; /* Set font size for list items */
+  }
+  
+  /* Styling for horizontal rule */
+  hr {
+    border: none; /* Remove default border */
+    background-color: #11154e; /* Change line color */
+    height: 3px; /* Set line height */
+    width: 100%; /* Set line width */
+    margin: 30px auto; /* Center the line horizontally and add spacing */
+  }
+  
