@@ -1,4 +1,4 @@
-- title: "Step 1: Lorem Ipsum"
+- title: "Ste"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   command: "docker-compose up -d"
   image: "/assets/images/1.jpg"

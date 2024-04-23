@@ -1,0 +1,10 @@
+I"!<h1 id="docker-compose-experiment-steps">Docker Compose Experiment Steps</h1>
+
+<div class="step">
+    <h2>Ste</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <pre><code>docker-compose up -d</code></pre>
+    <img src="/assets/images/1.jpg" alt="Ste" />
+</div>
+
+:ET
