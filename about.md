@@ -1,6 +1,0 @@
----
-layout: default
-title: "About"
----
-
-This is the About page of my Docker Compose blog. Here, I share more about myself and the purpose of this blog.
