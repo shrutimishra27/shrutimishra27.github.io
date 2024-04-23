@@ -1,9 +1,0 @@
-- title: "Ste"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  command: "docker-compose up -d"
-  image: "/assets/images/1.jpg"
-
-
-
-  
-# Add more steps as needed
