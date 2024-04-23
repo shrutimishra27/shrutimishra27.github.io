@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Docker Compose Blog</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    
+    <header>
+      <h1 style="text-align: center">
+        Building a Three-Tier Application with Docker
+      </h1>
+      <h1 style="text-align: end; color: #010a43">
+        by Shruti Mishra, 21BCP110
+      </h1>
+      <p class="theory">
+        In this blog, we'll create a simple three-tier application using Docker.
+        The application will consist of a html web server (Nginx), a backend
+        server (Node.js), and a database server (MySQL). We'll use Docker to
+        containerize each component, ensuring that our application is portable
+        and easy to deploy.
+      </p>
+    </header>
+    <main>
+      <h2 id="docker-compose-experiment-steps" class="main_title">Prerequisites:</h2>
+      <ul class="mylist">
+        <li>Basic understanding of Docker and Docker Compose.</li>
+        <li>Docker installed on your machine.</li>
+        <li>A text editor or IDE of your choice</li>
+      </ul>
+      <hr />
+      <h2 id="docker-compose-experiment-steps" class="main_title">
+        (1) Creating the Three-Tier App:
+      </h2>
+      <div class="step">
+        <h2>Step 1: Create Frontend Tier</h2>
+        <p class="step_theory">
+          This tier is in charge of displaying information to the user and
+          managing user interactions. It encompasses various user interfaces
+          such as web browsers, mobile apps, or desktop applications.
+          <br><br>
+          My Frontend Tier consists:
+          <ul class="mylist">
+            <li>frontend: Contains the static files for the frontend</li>
+            <li>frontend-nginx: Contains the Dockerfile and configuration for serving the frontend using Nginx</li>
+          </ul>
+        </p>
+        <img src="/assets/images/tier (3).png" alt="Step 1: Lorem Ipsum" />
+      </div>
+      <div class="step">
+        <h2>Step 2: Create Backend Tier</h2>
+        <p class="step_theory">
+          This tier encapsulates the core functionality of the application,
+          including processing user requests, executing calculations, and
+          communicating with the data storage layer. It may involve application
+          servers, APIs, and microservices.
+          <br><br>
+          I have created the Backend using Node.js.
+        </p>
+        <img src="/assets/images/tier (2).png" alt="Step 1: Lorem Ipsum" />
+      </div>
+      <div class="step">
+        <h2>Step 3: Create Database Tier</h2>
+        <p class="step_theory">
+          This tier is responsible for storing and organizing the data that the
+          application uses. It can utilize a relational database, NoSQL
+          database, file system, or any other data storage mechanism.
+          <br><br>
+          I have used MySQL for my Database Management System.
+        </p>
+        <img src="/assets/images/tier (1).png" alt="Step 1: Lorem Ipsum" />
+      </div><hr>
+      <h2 id="docker-compose-experiment-steps" class="main_title">
+        (2) Creating the Dockerfiles for Three-Tier App:
+      </h2>
+      <div class="step">
+        <h2>Step 1: Create Dockerfile for Frontend</h2>
+        <p class="step_theory">frontend-nginx -> Dockerfile:</p>
+        <img src="/assets/images/fro (2).png" alt="Step 1: Lorem Ipsum" />
+        <p class="step_theory">frontend -> nginx-conf:</p>
+        <img src="/assets/images/fro (1).png" alt="Step 1: Lorem Ipsum" />
+      </div>
+      <div class="step">
+        <h2>Step 2: Create Dockerfile for Backend</h2>
+        <p class="step_theory">Dockerfile:</p>
+        <img src="/assets/images/back.png" alt="Step 1: Lorem Ipsum" />
+      </div>
+       <div class="step">
+        <h2>Step 3: Create Dockerfile for MySQL Database</h2>
+        <p class="step_theory">Dockerfile:</p>
+        <img src="/assets/images/data.png" alt="Step 1: Lorem Ipsum" />
+      </div><hr>
+      <h2 id="docker-compose-experiment-steps" class="main_title">
+        (3) Creating the Docker Compose File:
+      </h2>
+      <div class="step">
+        <h2>Create Docker-Compose for the Application</h2>
+        <p class="step_theory">docker-compose.yml:</p>
+        <img src="/assets/images/dc.png" alt="Step 1: Lorem Ipsum" />
+      </div><hr>
+      <h2 id="docker-compose-experiment-steps" class="main_title">
+        (4) Building and Running the Application:
+      </h2>
+      <div class="step">
+        <h2>Run the following command in the terminal:</h2>
+        <pre><code>
+    docker-compose up --build
+        </code></pre>
+        <img src="/assets/images/docker (14).png" alt="Step 1: Lorem Ipsum" />
+        <img src="/assets/images/docker (13).png" alt="Step 1: Lorem Ipsum" />
+      </div> <hr>
+      <h2 id="docker-compose-experiment-steps" class="main_title">
+        (5) Application is Successfully Built:
+      </h2>
+      <div class="step">
+        <pre><code>
+    docker ps
+        </code></pre>
+        <img src="/assets/images/docker (12).png" alt="Step 1: Lorem Ipsum" />
+
+        <h2>Docker Desktop:</h2>
+        <img src="/assets/images/docker (16).png" alt="Step 1: Lorem Ipsum" />
+      </div>
+      <hr> 
+      <h2 id="docker-compose-experiment-steps" class="main_title">
+        (6) View Running Application:
+      </h2>
+      <div class="step">
+        <h2>1. Frontend:</h2>
+        <img src="/assets/images/docker (5).png" alt="Step 1: Lorem Ipsum" style="height: 400px; width:900px; "/>
+  
+          <h2>2. Backend:</h2>
+          <img src="/assets/images/docker (4).png" alt="Step 1: Lorem Ipsum" style="height: 300px; width: 900px;"/>
+          <br>
+        </div>
+      </div><hr>
+     <h2 id="docker-compose-experiment-steps" class="main_title">
+       (7) Manupulating MySQL Database via Docker:
+     </h2>
+     <div class="step">
+        <p class="step_theory">Run the following command in terminal:</p>
+        <pre><code>
+    docker exec -t <i>container_id</i> mysql -u <i>name_of_user</i> -p
+        </code></pre>
+        <img src="/assets/images/docker (11).png" alt="Step 1: Lorem Ipsum" />
+        <p class="step_theory">Manupulate the database:</p>
+        <img src="/assets/images/docker (10).png" alt="Step 1: Lorem Ipsum" />
+      </div><hr>
+    <h2 id="docker-compose-experiment-steps" class="main_title">
+       (8) Push the Docker Images on Docker-Hub:
+     </h2>
+     <div class="step">
+     <p class="step_theory">Run the following commands in terminal:</p>
+        <pre><code>
+    docker tag <i>SOURCE_IMAGE TARGET_IMAGE[:TAG]</i>
+        </code></pre>
+        <pre><code>
+    docker push <i>TARGET_IMAGE[:TAG]</i>
+        </code></pre>
+        </div>
+     <div class="step">
+        <h2>Step 1: Tag and Push Frontend Image</h2>
+        <p class="step_theory">Tag and Push:</p>
+        <img src="/assets/images/docker (8).png" alt="Step 1: Lorem Ipsum" />
+        <p class="step_theory">Image:</p>
+        <img src="/assets/images/docker (3).png" alt="Step 1: Lorem Ipsum" />
+        <p class="step_theory">View Image on Docker-Hub:</p>
+        <a href="https://hub.docker.com/layers/shruti2704/21bcp110_frontend/latest/images/sha256:76943c67c4add0f0ac73dfb931d43505d323a99d145b4f51faf29125c0609790?uuid=7C80163E-7863-40AE-AC82-A32890CA59F4">Frontend-Image-URL</a><br><br>
+      </div>     
+      <div class="step">
+        <h2>Step 2: Tag and Push Backend Image</h2>
+        <p class="step_theory">Tag and Push:</p>
+        <img src="/assets/images/docker (9).png" alt="Step 1: Lorem Ipsum" />
+        <p class="step_theory">Image:</p>
+        <img src="/assets/images/docker (2).png" alt="Step 1: Lorem Ipsum" />
+        <p class="step_theory">View Image on Docker-Hub:</p>
+        <a href="https://hub.docker.com/layers/shruti2704/21bcp110_backend/latest/images/sha256:244b8c211dfa556bdc873e7df08c7624521a46e7429143a0e6c6fcca687d53cc?uuid=7C80163E-7863-40AE-AC82-A32890CA59F4">Backend-Image-URL</a><br><br>
+
+      </div> 
+       <div class="step">
+        <h2>Step 3: Tag and Push Database Image</h2>
+        <p class="step_theory">Tag and Push:</p>
+        <img src="/assets/images/docker (7).png" alt="Step 1: Lorem Ipsum" />
+        <p class="step_theory">Image:</p>
+        <img src="/assets/images/docker (6).png" alt="Step 1: Lorem Ipsum" />
+        <p class="step_theory">View Image on Docker-Hub:</p>
+        <a href="https://hub.docker.com/layers/shruti2704/21bcp110_database/latest/images/sha256:ebd97e75cd34aa268a6fa606bcfd2ebb4c978abf4352bd74fcb76a08f75a02c3?uuid=7C80163E-7863-40AE-AC82-A32890CA59F4">Database-Image-URL</a><br><br>
+      </div>
+    </main>  
+    <footer>
+      <p>&copy; 2024 Shruti Mishra: 21BCP110</p>
+    </footer>
+  </body>
+</html>
